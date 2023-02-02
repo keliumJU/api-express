@@ -1,6 +1,7 @@
 
 function base() {
-  // comment
+  // comment 1
+  // comment 2
   const greting_env = process.env.GREET;
   const main = process.env.MAIN;
   console.log(greting_env)
