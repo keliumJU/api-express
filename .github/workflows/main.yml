@@ -1,11 +1,11 @@
 name: CI
 on:
   push:
-  branches:
-    - main
+    branches:
+      - main
 jobs:
   test-env:
-    name: testing-environment 
+    name: testing-environment
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
