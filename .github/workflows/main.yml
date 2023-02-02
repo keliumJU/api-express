@@ -22,6 +22,8 @@ jobs:
 
       - name: "Install the project"
         run: npm install
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Run the tests"
         run: npm test
