@@ -13,21 +13,17 @@ jobs:
     name: testing-environment
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v4
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-
       - name: 'Create env file'
         run: |
           echo "${{ secrets.ENV_FILE_QUOT }}" > .env
           cat .env
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Install the project"
         run: npm install
 
       - name: "Run the tests"
         run: npm test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
