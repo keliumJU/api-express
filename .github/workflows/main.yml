@@ -3,11 +3,19 @@ on:
   pull_request:
     branches:
       - main
+
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   test-env:
     name: testing-environment
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
@@ -23,4 +31,3 @@ jobs:
 
       - name: "Run the tests"
         run: npm test
-
