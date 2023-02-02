@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+  branches:
+    - main
+jobs:
+  test-env:
+    name: testing-environment 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: 'Create env file'
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: "Install the project"
+        run: npm install
+
+      - name: "Run the tests"
+        run: npm test
+
