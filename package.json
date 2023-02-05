@@ -13,6 +13,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "secure-env": "^1.2.0",
     "twilio": "^3.84.1"
   },
   "devDependencies": {

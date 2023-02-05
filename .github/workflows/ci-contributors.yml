@@ -1,0 +1,31 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  test-env-contributors:
+    name: testing-environment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: "Install the project"
+        run: npm install
+
+      - name: 'Create .env file in base .env.example'
+        run: |
+          rm .env.enc
+          cp .env.example .env
+          ./node_modules/secure-env/dist/es5/lib/cli.js .env -s mySecretPassword
+
+      - name: "Run the tests"
+        run: npm test

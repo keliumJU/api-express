@@ -2,6 +2,6 @@ const base = require('./base.js');
 require('dotenv').config()
 
 test ('show greeting test', () => {
-  let expected = 'Greetings from foo! Welcome_to_the_jungle and Virgin_forest' 
+  let expected = `Greetings from foo! ${global.env.GREET} and ${global.env.MAIN}` 
   expect(base()).toBe(expected);
 });
