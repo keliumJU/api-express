@@ -18,5 +18,10 @@
   },
   "devDependencies": {
     "jest": "^29.4.1"
+  },
+  "jest": {
+    "verbose": true,
+    "testMatch": ["**/tests/**"]
+
   }
 }
