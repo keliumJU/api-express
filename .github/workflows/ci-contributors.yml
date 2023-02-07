@@ -1,6 +1,6 @@
 name: CI-contributors
 on:
-  push:
+  pull_request:
     branches:
       - main
 

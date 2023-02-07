@@ -1,6 +1,8 @@
 import './App.css';
 import ChitChat from './components/chitChat'
 import UserProfile from './components/userProfile'
+import ButtonHover from './components/buttonHover'
+import ListUsers from './components/listUsers';
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       </h1>
       <ChitChat/>
       <UserProfile/>
+      <ButtonHover/>
+      <ListUsers />
     </div>
   );
 }

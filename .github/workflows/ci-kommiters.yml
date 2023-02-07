@@ -7,6 +7,8 @@ on:
         required: true
         default: "mySecretPassword"
         type: string
+    branches:
+      - main
 
 permissions:
   contents: read
