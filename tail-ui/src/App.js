@@ -3,6 +3,7 @@ import ChitChat from './components/chitChat'
 import UserProfile from './components/userProfile'
 import ButtonHover from './components/buttonHover'
 import ListUsers from './components/listUsers';
+import CardResponsive from './components/CardResponsive';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <UserProfile/>
       <ButtonHover/>
       <ListUsers />
+      <CardResponsive />
     </div>
   );
 }
