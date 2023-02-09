@@ -4,6 +4,7 @@ import UserProfile from './components/userProfile'
 import ButtonHover from './components/buttonHover'
 import ListUsers from './components/listUsers';
 import CardResponsive from './components/CardResponsive';
+import Menu from './components/Menu';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ButtonHover/>
       <ListUsers />
       <CardResponsive />
+      <Menu />
     </div>
   );
 }
