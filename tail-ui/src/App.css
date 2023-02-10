@@ -39,10 +39,8 @@
 
 .collapsible .content {
     padding: 6px;
-    background-color: #eeeeee;
 }
 .collapsible .header {
-    background-color: #dddddd;
     padding: 6px;
     cursor: pointer;
 }

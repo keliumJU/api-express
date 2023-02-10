@@ -17,7 +17,11 @@ function App() {
       <ButtonHover/>
       <ListUsers />
       <CardResponsive />
-      <Menu />
+      <div className='flex flex-col justify-center items-center h-full'>
+        <div className='m-auto w-96'>
+          <Menu />
+        </div>
+      </div>
     </div>
   );
 }

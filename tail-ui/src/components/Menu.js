@@ -1,23 +1,18 @@
-import React from 'react';
-import useCollapse from 'react-collapsed';
+import Section from "./Section"
+import MenuButton from "./MenuButton"
 
-function Menu() {
-
-  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
-
+function Menu () {
   return (
-    <div className="collapsible">
-      <div className="header" {...getToggleProps()}>
-        {isExpanded ? 'Collapse' : 'Expand'}
-      </div>
-      <div {...getCollapseProps()}>
-        <div className="content">
-          Now you can see the hidden content. <br /><br />
-          Click again to hide...
-        </div>
-      </div>
-    </div>
+    <>
+      <Section title="ETV">
+        <MenuButton title="Leishmaniasis" />
+        <MenuButton title="Malaria" />
+        <MenuButton title="Changas" />
+      </Section>
+      <Section title="ZOONOSIS"></Section>
+      <Section title="MICOBACTERIAS"></Section>
+    </>
   )
 }
 
-      export default Menu
+export default Menu
