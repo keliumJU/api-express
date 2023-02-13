@@ -1,0 +1,12 @@
+
+cuando la card de peso en el componente home ne la vista de mobile se interactua con con menu dropdown se cambia al componente
+seleccionado por ejemplo: "Leishmaniasis" hasta aqui todo bien, aparece un boton volver para regresar al componente home y volver
+a mirar el menu dropdown
+
+Ahora si estamos en modo desktop en el contendor home aparece el menu dropdown, la card del weight y la posible lista de opciones
+si le damos click al una opcion del boton dropdown leishmaniasis por ejemplo, no se redirecciona a ningun lado, si no que 
+se actualizan los medicamentos de leishmaniasis??.
+
+algo que si es posible es dejar el menu dropdown como menu left y dejarlo fijo, asi redireccionamos a otros componentes ... y mantenemos
+la existencia del menu y el card del weight, pero como se maneja esto con la version mobile?, si esta fijo, se supone que para movile tambien
+y al hacer touch en una opcion el menu desaparece ?? una vez mas lo mismo, como desaparece y a la ves se mantiene?
