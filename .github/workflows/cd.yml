@@ -24,7 +24,7 @@ jobs:
           node-version: "16"
 
       - name: "Install dependencies"
-        run: npm run install-ui
+        run: npm run ci-ui
 
       - name: "Clean the build"
         run: npm run build:clean

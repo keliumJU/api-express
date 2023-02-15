@@ -10,7 +10,8 @@
     "build:clean": "cd tail-ui && rm -rf ./build",
     "build": "cd tail-ui && yarn build",
     "install-ui": "cd tail-ui && yarn install",
-    "start-ui": "cd tail-ui && yarn start"
+    "start-ui": "cd tail-ui && yarn start",
+    "ci-ui": "cd tail-ui && yarn install --frozen-lockfile"
   },
   "author": "",
   "license": "ISC",
