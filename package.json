@@ -8,7 +8,8 @@
     "start": "node index.js",
     "test": "jest",
     "build:clean": "cd tail-ui && rm -rf ./build",
-    "build": "cd tail-ui && npm run build"
+    "build": "cd tail-ui && npm run build",
+    "install-ui": "npm install && cd tail-ui && yarn install"
   },
   "author": "",
   "license": "ISC",
