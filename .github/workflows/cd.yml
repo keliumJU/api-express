@@ -29,9 +29,6 @@ jobs:
       - name: "Clean the build"
         run: npm run build:clean
 
-      - name: "Install the project"
-        run: npm ci
-
       - name: "Build the project"
         run: npm run build
 
