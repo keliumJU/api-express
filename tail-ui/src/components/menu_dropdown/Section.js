@@ -14,6 +14,7 @@ function Section({defaultExpanded, collapsedHeight, title, children, iconName, i
       <div className="header bg-white text-neutral-700" {...getToggleProps()}>
         <div className='flex flex-row'>
           <div className='pr-2'><img src={iconName} alt="icon-name" /></div>
+          {isExpanded}
           <h6>{title}</h6>
           <div className='ml-auto'><img src={iconRight} alt="icon-right" /></div>
         </div>
