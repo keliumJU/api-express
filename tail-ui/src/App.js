@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <h1 className="text-slate-400 font-bold underline">
-        Hello world!
+        Hello world! with update from CD
       </h1>
       <ChitChat/>
       <UserProfile/>
