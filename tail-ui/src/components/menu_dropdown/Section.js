@@ -12,14 +12,14 @@ function Section({defaultExpanded, collapsedHeight, title, children, iconName, i
   return (
     <div className="px-8 w-full collapsible">
       <div className="header bg-white text-neutral-700" {...getToggleProps()}>
-        <div className='flex flex-row'>
-          <div className='pr-2'><img src={iconName} alt="icon-name" /></div>
+        <div className='flex flex-row p-4 font-semibold'>
+          <div className='pr-2'><img src={iconName} className="w-6 h-6" alt="icon-name" /></div>
           {isExpanded}
-          <h6>{title}</h6>
-          <div className='ml-auto'><img src={iconRight} alt="icon-right" /></div>
+          <h6 className="text-xl">{title}</h6>
+          <div className='ml-auto'><img src={iconRight} className="w-5 h-5" alt="icon-right" /></div>
         </div>
       </div>
-      <div {...getCollapseProps()} className="bg-purple-400">
+      <div {...getCollapseProps()} className="bg-white">
         <div className="content flex flex-col items-start ml-8 bg-white" >
           {children}
         </div>
