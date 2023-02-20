@@ -18,6 +18,8 @@ jobs:
       AWS_REGION: ${{ secrets.DAPP_AWS_REGION }}
       SOURCE_DIR: 'tail-ui/build'
       PATHS: "/*"
+      AWS_S3_BUCKET: ${{ secrets.DAPP_AWS_S3_PROD_BUCKET }}
+      DISTRIBUTION: ${{ secrets.DAPP_PROD_DISTRIBUTION }}
 
     steps:
       - uses: actions/checkout@v3
@@ -38,10 +40,6 @@ jobs:
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.DAPP_AWS_S3_PROD_BUCKET }}
 
       - name: Invalidate Production CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
-        env:
-          DISTRIBUTION: ${{ secrets.DAPP_PROD_DISTRIBUTION }}

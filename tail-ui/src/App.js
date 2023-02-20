@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <h1 className="text-slate-400 font-bold underline">
-        Hello world! with update from CD
+        Hello world! with update from CD, this is new release 0.1.2
       </h1>
       <ChitChat/>
       <UserProfile/>
