@@ -4,10 +4,6 @@ on:
   release:
     types:
       [published]
-
-permissions:  # added using https://github.com/step-security/secure-workflows
-  contents: read
-
 jobs:
   publish:
     name: Publish Release to rudyx.org

@@ -41,7 +41,7 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.DAPP_AWS_S3_PROD_BUCKET }}
 
       - name: Invalidate Production CloudFront
-        if: github.ref == 'refs/heads/v*[0-9]'
+        if: startsWith(github.ref, 'ref/head/v')
         uses: chetan/invalidate-cloudfront-action@v2
         env:
           DISTRIBUTION: ${{ secrets.DAPP_PROD_DISTRIBUTION }}
